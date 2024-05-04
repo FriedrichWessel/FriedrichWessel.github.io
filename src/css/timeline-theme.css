@@ -41,7 +41,7 @@ body{
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0
+	right: 0
 }
 
 .main-timeline .icon:before,
@@ -151,7 +151,7 @@ body{
 
 .main-timeline .year {
     display: block;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
     color: #232323;
     line-height: 36px
@@ -171,7 +171,8 @@ body{
 }
 
 .main-timeline .description {
-    margin-bottom: 0
+    margin-top: 1em; 
+	margin-bottom: 1em; 
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {

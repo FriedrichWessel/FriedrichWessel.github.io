@@ -6,7 +6,6 @@ title: Friedrich Wessel
 	<div class="main-timeline">
 		{%- for project in collections.projects | reverse -%}
 		<div class="timeline">
-			<div class="icon"></div>
 			<div class="date-content">
 				<div class="date-outer">
 					<span class="date">
@@ -15,21 +14,46 @@ title: Friedrich Wessel
 					</span>
 				</div>
 			</div>
-			<div class="timeline-content">
+			<div class="timeline-content border-bottom">
 				<h5 class="title">{{project.data.title}} : {{project.data.project}}</h5>
 				{%- if project.data.image.length > 0 %}
 					<img src={{project.data.image}} class="project-title-image">
 				{%- endif -%}
+				{%- if project.data.smallImage.length > 0 -%}
+					<img src={{project.data.smallImage}} class="small-project-title-image">
+				{%- endif -%}
 				{%- if project.data.vimeo.length > 0 %}
-					<div style="padding:75% 0 0 0;position:relative;">
+					<div style="padding:55% 0 0 0;position:relative;">
 						<iframe src={{project.data.vimeo}} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel as 3d artists">
 						</iframe>
 					</div>
 					<script src="https://player.vimeo.com/api/player.js"></script>
 				{%- endif -%}
+				{%- if project.data.youtube.length > 0 %}
+				<iframe width="560" height="315" 
+					src={{project.data.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+				{%- endif -%}
 				<p class="description">
 					{{project.data.description}}
 				</p>
+				{%- if project.data.tech.length > 0 -%}
+					<div class="container border">
+						<div class="row bg-secondary text-white">
+							<div class="col border-right">Tech-Stack</div>
+							<div class="col">Project Link</div>
+						</div>
+						<div class="row">
+							<div class="col text-left">
+								<strong>{{project.data.tech}}</strong>
+							</div>
+							<div class="col">
+								<a class="link-dark" href={{project.data.projectLinkSrc}} rel="noopener noreferrer" target="_blank">{{project.data.projectLink}}</a>
+							</div>
+						</div>
+					</div>
+				{%- endif -%}
+				
 			</div>
 		</div>
 		{%- endfor -%}
