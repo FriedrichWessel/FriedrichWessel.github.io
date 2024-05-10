@@ -1,11 +1,11 @@
 ---
-date: 2021-02-01
-year: 2021
+date: 2019-02-01
+year: 2018-2019
 title: Senior Software Developer
-project: Blog Post
+project: On Stage GameJam
 customer: Inno Games
-image: "/assets/images/BlogPost2.png"
-description: Article about productivity as a software developer
-projectLink: InnoBlog
-projectLinkSrc: https://blog.innogames.com/how-to-avoid-the-unit-test-monster/
+image: "/assets/images/igJam.jpeg"
+description: I was part of the InnoGames On Stage Jam team at Gamescom in both 2018 and 2019. In both years, we developed a game from scratch on stage in 48 hours.
+projectLink: IGJam 2019
+projectLinkSrc: https://www.gamesmarkt.de/publishing/innogames-game-jam-im-zeichen-der-barrierefreiheit-67d294caa4e45caae12d8818ca30e1c7
 ---

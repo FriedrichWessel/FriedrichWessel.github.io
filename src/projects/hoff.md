@@ -5,8 +5,7 @@ title: Senior Game Developer
 customer: Inno Games
 project: Heros of fate and fortune
 image: assets/images/hoff.jpeg
-description: 
+description: exploration game where I worked as a game logic and tools developer
 projectLink: 
-tech: unity3d, c#
-//youtube: "https://www.youtube.com/embed/eCkA-DlQSNs?si=qlfQz5jZYxAgm4-h"
+tech: unity3d, c#, Java (Springboot)
 ---

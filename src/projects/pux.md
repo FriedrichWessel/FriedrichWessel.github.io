@@ -7,4 +7,5 @@ customer: asdf-systems
 image: "/assets/images/pux.jpeg"
 description: with asdf-systems we published this little game to get first hand experience for publishing a game in the appStore
 projectLink:
+tech: ogre3d, c++
 ---

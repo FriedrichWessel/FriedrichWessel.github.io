@@ -5,6 +5,7 @@ title: Co-Founder
 project: asdf-systems
 customer: asdf-systems
 image: "/assets/images/asdf_systems.jpeg"
-description: started my own company
-projectLink: https://www.northdata.de/asdf-systems+UG,+Berlin/Amtsgericht+Charlottenburg+%28Berlin%29+HRB+127722+B
+description: Co-founded a software company with a distinct focus on crafting custom business software and rapid prototype development. I managed the projects, and worked as a developer.
+projectLink: asdf-systems
+projectLinkSrc: https://www.northdata.de/asdf-systems+UG,+Berlin/Amtsgericht+Charlottenburg+%28Berlin%29+HRB+127722+B
 ---

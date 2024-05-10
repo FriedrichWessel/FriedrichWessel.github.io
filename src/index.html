@@ -52,6 +52,17 @@ title: Friedrich Wessel
 							</div>
 						</div>
 					</div>
+				{%- elif project.data.projectLink.length > 0 -%}
+				<div class="container border">
+					<div class="row bg-secondary text-white">
+						<div class="col">Project Link</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<a class="link-dark" href={{project.data.projectLinkSrc}} rel="noopener noreferrer" target="_blank">{{project.data.projectLink}}</a>
+						</div>
+					</div>
+				</div>
 				{%- endif -%}
 				
 			</div>

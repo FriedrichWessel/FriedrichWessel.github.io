@@ -4,9 +4,9 @@ year: 2010
 title: Software Developer
 project: Animation Control
 customer: asdf-systems
-description: open Source project to test the option to control digital characters with classic animation controls
+description: open-source project focused on exploring the integration of traditional puppet animation controls with digital character manipulation
 projectLink: github
 projectLinkSrc: https://github.com/FriedrichWessel/Pupflow
-tech: blender, python, c++
+tech: blender, python, golang
 vimeo: "https://player.vimeo.com/video/40471709?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 ---
