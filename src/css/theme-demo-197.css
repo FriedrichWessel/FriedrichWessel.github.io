@@ -42,15 +42,20 @@
 .main-timeline .timeline-year{
     color: #fff;
     background:var(--color2);
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 100;
     padding: 3px 20px 2px;
     border-radius: 100px;
     border: 5px solid var(--color1);
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    right: -300px;
+    right: -350px;
+}
+
+.main-timeline .timeline-year h3{
+    font-size: 30px;
+    font-weight: 400;
 }
 .main-timeline .title{
     color:#fff;
@@ -90,17 +95,17 @@
 }
 .main-timeline .timeline:nth-child(even) .timeline-year{
     right: auto;
-    left: -300px;
+    left: -350px;
 }
-.main-timeline .timeline:nth-child(2){
+.main-timeline .timeline:nth-child(2n){
     --color1: #9AE365;
     --color2: #81CA47;
 }
-.main-timeline .timeline:nth-child(3){
+.main-timeline .timeline:nth-child(3n){
     --color1: #F15B53;
     --color2: #D63C38;
 }
-.main-timeline .timeline:nth-child(4){
+.main-timeline .timeline:nth-child(4n){
     --color1: #7c49b7;
     --color2: #5b2499;
 }

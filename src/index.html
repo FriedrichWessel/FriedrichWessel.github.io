@@ -6,13 +6,22 @@ title: Friedrich Wessel
     <div class="row">
         <div class="col-md-12">
             <div class="main-timeline">
-                {%- for project in collections.projects | reverse -%}
-					<div class="timeline">
-						<a href="#" class="timeline-content">
-							<div class="timeline-year">{{project.data.year}}<br>{{project.data.customer}}</div>
-							<h3 class="title">{{project.data.title}} : {{project.data.project}}</h3>
-							<p class="description">
-								{%- if project.data.image.length > 0 %}
+				{%- for project in collections.projects | reverse -%}
+				<div class="timeline">
+                    <div class="timeline-content">
+                        
+						<div class="timeline-year">
+							<h3>{{project.data.year}}</h3>
+							<p>{{project.data.customer}}</p>
+						</div>
+                        <div class="title">
+							<h3>{{project.data.title}}</h3>
+							<p>{{project.data.project}}</p>
+						</div>
+						
+                        <div class="description">
+							<div>
+							{%- if project.data.image.length > 0 %}
 									<img src={{project.data.image}} class="project-title-image">
 								{%- endif -%}
 								
@@ -33,16 +42,16 @@ title: Friedrich Wessel
 										src={{project.data.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 									</iframe>
 								{%- endif -%}
-								
-								<p class="description">
-									{{project.data.description}}
-								</p>
-					
-								{%- if project.data.tech.length > 0 -%}
+							</div>
+							<p>
+								{{project.data.description}}
+							</p>
+                        </div>
+						{%- if project.data.tech.length > 0 -%}
 									<div class="container border">
 										<div class="row bg-secondary text-white">
-											<div class="col border-right">Tech-Stack</div>
-											<div class="col">Project Link</div>
+											<div class="col border-right">Tech stack</div>
+											<div class="col">Project link</div>
 										</div>
 										<div class="row">
 											<div class="col text-left">
@@ -56,7 +65,7 @@ title: Friedrich Wessel
 								{%- elif project.data.projectLink.length > 0 -%}
 									<div class="container border">
 										<div class="row bg-secondary text-white">
-											<div class="col">Project Link</div>
+											<div class="col">Project link</div>
 										</div>
 										<div class="row">
 											<div class="col">
@@ -65,9 +74,8 @@ title: Friedrich Wessel
 										</div>
 									</div>
 								{%- endif -%}
-							</p>
-						</a>
-					</div>
+						</div>
+                </div>
 				{%- endfor -%}
             </div>
         </div>
