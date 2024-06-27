@@ -5,4 +5,6 @@ title: Bsc of science
 project: Informatik
 customer: FU Berlin
 smallImage: "/assets/images/abi.png"
+tagGroup: 
+    - career
 ---

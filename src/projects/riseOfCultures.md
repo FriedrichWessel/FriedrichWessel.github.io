@@ -9,4 +9,7 @@ description: Civilisation building game. I was responsible for build pipeline to
 projectLink: Rise of Cultures - Browser 
 projectLinkSrc: https://eu-play.riseofcultures.com/
 tech: groovy, jenkins, javaScript
+tagGroup: 
+    - project 
+    - games
 ---

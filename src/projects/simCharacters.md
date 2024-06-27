@@ -9,4 +9,7 @@ description: 1 year research project for the prototype development of the medica
 tech: unity3d, assembler, c# , c++,
 projectLink: Simcharacters
 projectLinkSrc: https://simcharacters.com/en/products/paul/
+tagGroup: 
+    - project 
+    - other
 ---

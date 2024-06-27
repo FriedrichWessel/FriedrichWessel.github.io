@@ -9,4 +9,7 @@ description: Realtime multiplayer towerdefense game. I worked as a full stack de
 projectLink: Food Fight TD
 projectLinkSrc: https://play.google.com/store/apps/details?id=com.innogames.earlydefenders&hl=de&gl=US
 tech: Java (Spring Boot), Unity3d C#
+tagGroup: 
+    - project 
+    - games
 ---

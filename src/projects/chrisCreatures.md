@@ -8,4 +8,8 @@ description: Started as an intern, and continued to work for a little over 2 yea
 projectLink: ChrisCreatures
 projectLinkSrc: http://www.chriscreatures.com/
 vimeo: "https://player.vimeo.com/video/40504539?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+tagGroup: 
+    - project 
+    - career
+    - other
 ---

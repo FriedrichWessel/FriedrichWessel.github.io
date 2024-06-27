@@ -8,4 +8,7 @@ image: "/assets/images/BlogPost2.png"
 description: Article about productivity as a software developer.
 projectLink: InnoBlog
 projectLinkSrc: https://blog.innogames.com/how-to-avoid-the-unit-test-monster/
+tagGroup: 
+    - project 
+    - public
 ---

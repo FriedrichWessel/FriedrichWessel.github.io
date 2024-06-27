@@ -9,4 +9,7 @@ projectLink: Github
 projectLinkSrc: https://github.com/FriedrichWessel/Pupflow
 tech: Blender, Python, Golang
 vimeo: "https://player.vimeo.com/video/40471709?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+tagGroup: 
+    - project
+    - other
 ---

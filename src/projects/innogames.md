@@ -8,4 +8,6 @@ image: "/assets/images/innogames.avif"
 description: I started as a senior software developer at Innogames.
 projectLink: InnoGames GmbH
 projectLinkSrc: https://www.innogames.com/de/unternehmen/ueber-uns/
+tagGroup: 
+    - career
 ---

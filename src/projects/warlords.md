@@ -9,4 +9,7 @@ description: During the development of this strategy game, my focus was on refac
 projectLink: warlords
 projectLinkSrc: https://newsroom.innogames.com/warlords-of-aternum-rundenbasierte-strategie-hat-einen-neuen-namen
 tech: unity3d, C#
+tagGroup: 
+    - project 
+    - games
 ---

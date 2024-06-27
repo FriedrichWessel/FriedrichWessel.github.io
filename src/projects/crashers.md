@@ -8,4 +8,7 @@ description: Quick reaction racing game on mobile. Main development focus on det
 tech: Unity3d, C#, iOS, Android
 projectLink: 
 youtube: "https://www.youtube.com/embed/lugzciHe-Z8?si=BmHr91wtvn0Bt_UB"
+tagGroup: 
+    - project 
+    - games
 ---

@@ -8,4 +8,7 @@ description: Research project to control animatronics (mechanical-puppets) by mo
 projectLink:
 vimeo: "https://player.vimeo.com/video/40474963?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 tech: Maya scripting language (MEL), c++, AVR assembler
+tagGroup: 
+    - project 
+    - other
 ---

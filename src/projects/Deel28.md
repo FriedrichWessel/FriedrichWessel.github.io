@@ -9,4 +9,7 @@ description: I support Deel28 e.V in my village as a administrator, providing a 
 tech: Wordpress
 projectLink: Deel28
 projectLinkSrc: http://www.deel28.de/hofcafe-buchung/
+tagGroup: 
+    - project 
+    - other
 ---

@@ -9,4 +9,7 @@ description: I am part of a citizen's initative planning a local heat network. T
 tech: remix, nodeJS, react, prisma
 projectLink: evaluation tool github
 projectLinkSrc: https://github.com/energiewende-palingen/evaluationTool
+tagGroup: 
+    - project 
+    - other
 ---

@@ -7,4 +7,6 @@ customer: Dresden
 smallImage: "/assets/images/abi.png"
 description: 
 projectLink: 
+tagGroup: 
+    - career
 ---
