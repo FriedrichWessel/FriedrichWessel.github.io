@@ -72,56 +72,90 @@ title: Friedrich Wessel
 		          </label>
 		        </div>
 	      	</div>
-    	</div>		
-		<div class="row shuffle-wrapper portfolio-gallery">
-			{%- for project in collections.projects | reverse -%}
-			{%- set groupsString = '["' + project.data.tagGroup | join('","') + '"]' %}	
-
-				<div class="col-lg-6 col-6 mb-4 shuffle-item" data-groups={{groupsString}}>
-					<div class="position-relative inner-box">
-						<div class="image position-relative ">
-							
-						{%- if project.data.image.length > 0 %}
-							<img src={{project.data.image}} class="img-fluid w-100 d-block">
+    	</div>
+	
+		<div class="container mt-5">
+			<div class="grid">
+				<div class="grid-item-container shuffle-wrapper">
+					{%- for project in collections.projects | reverse -%}
+						{% if loop.index0 is even %}	
+							{% projectCard project %}	
 						{%- endif -%}
-						
-						{%- if project.data.smallImage.length > 0 -%}
-							<img src={{project.data.smallImage}} class="img-fluid w-100 d-block">
-						{%- endif -%}
-						
-						{%- if project.data.vimeo.length > 0 %}
-							<div style="padding:55% 0 0 0;position:relative;">
-								<iframe src={{project.data.vimeo}} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel as 3d artists">
-								</iframe>
-							</div>
-							<script src="https://player.vimeo.com/api/player.js"></script>
-						{%- endif -%}
-			
-						{%- if project.data.youtube.length > 0 %}
-							<iframe width="500px" height="500px"
-								src={{project.data.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-							</iframe>
-						{%- endif -%}
-						
-							<div class="overlay-box">
-								<div class="overlay-inner">
-									<a class="overlay-content" href={{project.data.projectLinkSrc}}>
-										<h5 class="mb-0">{{project.data.title}}</h5>
-										<p>{{project.data.customer}} - {{project.data.year}}</p>
-										<p><b>{{project.data.tech}}</b></p>
-									</a>
-								</div>
-							</div> 
-						</div>
-						<h5 class="mt-3 mb-0">{{project.data.project}}</h5>
-						<div class="show-on-hover">
-							<p class="">{{project.data.description}}</p>
-						</div>
-						
-					</div>
+					{%- endfor-%}	 
 				</div>
-			{%- endfor -%}
+
+				<div class="grid-item-container">
+					{%- for project in collections.projects | reverse -%}
+						{% if loop.index0 is odd %}	
+							{% projectCard project %}		
+						{%- endif -%}
+					{%- endfor-%}	 
+				</div>
+			</div>
 		</div>
 	</div>
+	
 </section>
+	
+		
+	
+
 <!-- Portfolio End -->
+<!--
+
+	<div class="container mt-5">
+			<div class="row shuffle-wrapper grid">
+				{%- for project in collections.projects | reverse -%}
+				{%- set groupsString = '["' + project.data.tagGroup | join('","') + '"]' %}	
+	
+					<div class="col-md-6 shuffle-item grid-item" data-groups={{groupsString}}>
+						<div class="position-relative inner-box">
+							<div class="image position-relative ">
+								
+							{%- if project.data.image.length > 0 %}
+								<img src={{project.data.image}} class="img-fluid w-100 d-block">
+							{%- endif -%}
+							
+							{%- if project.data.smallImage.length > 0 -%}
+								<img src={{project.data.smallImage}} class="img-fluid w-100 d-block">
+							{%- endif -%}
+							
+							{%- if project.data.vimeo.length > 0 %}
+								<div style="padding:55% 0 0 0;position:relative;">
+									<iframe src={{project.data.vimeo}} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel as 3d artists">
+									</iframe>
+								</div>
+								<script src="https://player.vimeo.com/api/player.js"></script>
+							{%- endif -%}
+				
+							{%- if project.data.youtube.length > 0 %}
+								<iframe width="500px" height="500px"
+									src={{project.data.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+								</iframe>
+							{%- endif -%}
+							
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<a class="overlay-content" href={{project.data.projectLinkSrc}}>
+											<h5 class="mb-0">{{project.data.title}}</h5>
+											<p>{{project.data.customer}} - {{project.data.year}}</p>
+											<p><b>{{project.data.tech}}</b></p>
+										</a>
+									</div>
+								</div> 
+							</div>
+							
+							<div class="content">
+								<div class="content-inner"></div>
+									<h5 class="mt-3 mb-0">{{project.data.project}}</h5>
+									<p class="">{{project.data.description}}</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				{%- endfor -%}
+			</div>
+		</div>	
+
+-->

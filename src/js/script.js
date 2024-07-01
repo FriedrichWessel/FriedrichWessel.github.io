@@ -37,16 +37,16 @@ AOS.init({
             });
         }); 
 
-    $('.owl-carousel').owlCarousel({
+   /*$('.owl-carousel').owlCarousel({
         items:1,
         loop:true,
         autoplay:true,
         dots:false,
         autoplayTimeout:8000
-    });
+    });*/
 
     // Shuffle js filter and masonry
-    var Shuffle = window.Shuffle;
+    /*var Shuffle = window.Shuffle;
     var jQuery = window.jQuery;
 
     var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
@@ -60,30 +60,92 @@ AOS.init({
         if (input.checked) {
             myShuffle.filter(input.value);
         }
-    });
+    });*/
+    
 
-    $('.portfolio-gallery').each(function () {
+    /*$('.portfolio-gallery').each(function () {
         $(this).find('.popup-gallery').magnificPopup({
             type: 'image',
             gallery: {
                 enabled: true
             }
         });
-    });
+    });*/
 
-    $('.inner-box').each(function () {
-        var hoverContent = $(this).find('.show-on-hover');
-        $(this).addEventListener('mouseenter', function() {
-            // Set max-height dynamically to the scrollHeight to ensure it fits content
-            hoverContent.style.maxHeight = hoverContent.scrollHeight + 'px';
-          });
-      
-          $(this).addEventListener('mouseleave', function() {
-            // Reset max-height to 0 when not hovered
-            hoverContent.style.maxHeight = '0';
-          });
-    });
+    $(document).ready(function() {
+        /*var Shuffle = window.Shuffle;
+        var element = document.querySelector('.shuffle-wrapper');
 
+        var shuffleInstance = new Shuffle(element, {
+            itemSelector: '.shuffle-item',
+            sizer: element.querySelector('.grid-item-container')
+          });
+          */
+
+        // Initialize Masonry
+        var $gridContainers = $('.grid-item-container').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-item'
+        });
+
+      // Adjust height dynamically based on content
+      $('.grid-item').hover(
+        function() {
+          var content = $(this).find('.content');
+          content.css({
+            'height': content.find('.content-inner').prop('scrollHeight') + 'px',
+            'opacity': 1
+          });
+
+          // Trigger Masonry layout update
+          $gridContainers.masonry('layout');
+        },
+        function() {
+          var content = $(this).find('.content');
+          content.css({
+            'height': '0',
+            'opacity': 0
+          });
+
+          // Trigger Masonry layout update
+          $gridContainers.masonry('layout');
+        }
+      );
+
+      // Handle filter change
+      $('input[name="shuffle-filter"]').on('change', function(evt) {
+        /*var input = evt.currentTarget;
+        if (input.checked) {
+            shuffleInstance.filter(input.value);
+        }*/
+        var filterValue = this.value;
+        $('.grid-item').each(function() {
+            var filter = $(this).data('groups');
+            if(filter && !filter.includes(filterValue)){
+                $(this).addClass('item-hidden');
+            } else {
+                $(this).removeClass('item-hidden');
+            }
+        });
+        /*var filterValue = this.value;
+        if (filterValue === 'all') {
+          shuffleInstance.filter(Shuffle.ALL_ITEMS);
+        } else {
+          shuffleInstance.filter(function(element) {
+            var test = $(element).data('groups');
+            return  test.includes(filterValue);
+          });
+        }*/
+
+        // Update Masonry layout after filtering
+        $gridContainers.each(function() {
+          $(this).masonry();
+        });
+        //$gridContainers.masonry('layout');
+      });
+        
+    });
 
 })(jQuery);
 

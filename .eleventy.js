@@ -1,10 +1,13 @@
+const ProjectCard = require('./src/_includes/components/projectCard');
 module.exports = function(eleventyConfig){
+	eleventyConfig.addPassthroughCopy("src/test.html");
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/css/");
 	eleventyConfig.addPassthroughCopy("src/js/");
 	eleventyConfig.addPassthroughCopy("src/plugins/");
 	
 	
+	eleventyConfig.addWatchTarget("src/test.html");
 	eleventyConfig.addWatchTarget("src/plugins/");
 	eleventyConfig.addWatchTarget("src/js/");
 	eleventyConfig.addWatchTarget("src/css");
@@ -13,6 +16,8 @@ module.exports = function(eleventyConfig){
 	eleventyConfig.addCollection("projects", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("src/projects/**/*.*");
 	});
+
+	eleventyConfig.addShortcode('projectCard', ProjectCard);
 	
 	return {
 		dir : {
