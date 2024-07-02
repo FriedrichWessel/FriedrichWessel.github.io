@@ -129,7 +129,7 @@ a {
   transition: all 0.25s ease;
 }
 a:hover {
-  color: #f44336;
+  color: var(--dark-main);
   text-decoration: none;
   outline: none;
 }
@@ -352,14 +352,14 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
   font-weight: 700;
 }
 .portfolio .btn-group .btn:hover {
-  color: #f44336;
+  color: var(--dark-main);
 }
 .portfolio .btn-group:not(:first-child) > .btn, .portfolio .btn-group > .btn:not(:first-child) {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 .portfolio .btn.active {
-  color: #f44336;
+  color: var(--main);
 }
 
 .inner-box {

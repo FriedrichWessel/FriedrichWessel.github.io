@@ -1,53 +1,156 @@
-/* Custom CSS */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
+/* Global */
+:root {
+    --main: rgb(24, 119, 64);
+    --dark-main: rgb(17, 93, 49);
+    --light-bg: rgb(194, 232, 210, 0.25);
+    --dark-bg: rgb(21, 52, 33);
+    --light-text: #fff;
 }
 
-/* Ensure grid items have consistent styling */
-.grid-item-container {
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    
+h2 {
+    color: var(--main);
+}
+
+/* banner */
+
+.banner {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 20px;
+}
+
+.banner h2 {
+    color: var(--light-text);
+}
+
+.dark-headline {
+    color: var(--dark-main);
+}
+
+.typing-container {
+    width: 100%;
+    max-width: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    overflow: hidden;
+    animation:  typing 3s steps(30, end),
+                blink-caret 0.75s step-end infinite,
+                cursor-hide 0s 3s forwards;
+}
+
+.typing-container2 {
+    width: 100%;
+    max-width: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation:  delay-visible 0s 3s forwards,
+                typing 3s steps(30, end) 3s,
+                blink-caret 0.75s step-end infinite,
+                cursor-hide 0s 6s forwards;
+}
+
+@keyframes typing {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(255, 255, 255); }
+}
+
+@keyframes delay-visible {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes cursor-hide {
+    from { border-color: rgb(255, 255, 255); }
+    to { border-color: transparent; }
+}
+
+/* About */
+
+.about {
+    padding: 50px;
+}
+
+/* Portfolio masonry */
+
+
+
+.grid-container {
+    column-count: 2;
+    column-gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    line-height: 0 !important;
 }
 
 .grid-item {
-    position: relative;
-    margin: 10px;
-}
-
-.grid-item .grid-image {
-    width: 100%;
-    height: auto;
+    background-color: var(--light-bg);
     display: block;
-}
-
-.grid-item img {
+    margin-bottom: 15px;
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-.grid-item .content {
-    height: 0;
-    opacity: 0;
     overflow: hidden;
-
+    position: relative;
+    max-height: 800px;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
 }
 
-.grid-item:hover .content {
+.img-container {
+    background-color: var(--light-bg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    max-width: 100%;
     height: auto;
-    opacity: 1;
 }
 
-.grid-item .content-inner {
-    padding: 10px 0;
+/* Overlay */
+
+.overlay {
+    max-height: 0;
+    background-color: var(--dark-bg);
+    color: #fff;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    line-height: 1.7em;
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
+.overlay h4,
+.overlay h6,
+.overlay p {
+    color: var(--light-text)
+}
+
+.overlay a{
+    color: var(--light-text);
+}
+
+.grid-item:hover .overlay {
+    max-height: 800px;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        column-count: 1;
+    }
+}
+
+/* Shuffle filter */
 .item-hidden {
-    height: 0px;
+    max-height: 0px;
     opacity: 0;
-    margin: 0;
 }

@@ -24,7 +24,7 @@ function escapeHtml (unsafe) {
     
     let content = `
       <div class="grid-item shuffle-item" data-groups='${groupsString}'>
-        <div class="grid-image">
+        <div class="image-container">
     `;
     
     if (project.data.image && project.data.image.length > 0) {
@@ -41,26 +41,32 @@ function escapeHtml (unsafe) {
     
     if (project.data.vimeo && project.data.vimeo.length > 0) {
       content += `
-        <div style="padding:55% 0 0 0;position:relative;">
-          <iframe src="${escapeHtml(project.data.vimeo)}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel as 3d artists"></iframe>
-        </div>
+        
+          <iframe src="${escapeHtml(project.data.vimeo)}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="aspect-ratio: 16 / 9; width: 100%" title="Showreel as 3d artists"></iframe>
+
         <script src="https://player.vimeo.com/api/player.js"></script>
       `;
     }
     
     if (project.data.youtube && project.data.youtube.length > 0) {
       content += `
-        <iframe width="500px" height="500px" src="${escapeHtml(project.data.youtube)}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe style="aspect-ratio: 16 / 9; width: 100%" src="${escapeHtml(project.data.youtube)}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       `;
     }
     
     content += `
         </div>
-        <div class="content">
-          <div class="content-inner">
-            <h5 class="mt-3">${escapeHtml(project.data.project)}</h5>
+        <div class="overlay">
+            <h4 class="mt-3">${escapeHtml(project.data.project)}</h4>
+            <h6>${escapeHtml(project.data.customer)} - ${escapeHtml(project.data.year)}</h6>
             <p>${escapeHtml(project.data.description)}</p>
-          </div>
+    `;
+    if(project.data.projectLink && project.data.projectLinkSrc.length > 0){
+        content += `
+            <a href="${escapeHtml(project.data.projectLinkSrc)}" class="" target="_blank">⇒View Project</a>
+        `;
+    }
+    content += `    
         </div>
       </div>
     `;

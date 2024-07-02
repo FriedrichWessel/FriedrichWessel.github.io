@@ -73,52 +73,10 @@ AOS.init({
     });*/
 
     $(document).ready(function() {
-        /*var Shuffle = window.Shuffle;
-        var element = document.querySelector('.shuffle-wrapper');
-
-        var shuffleInstance = new Shuffle(element, {
-            itemSelector: '.shuffle-item',
-            sizer: element.querySelector('.grid-item-container')
-          });
-          */
-
-        // Initialize Masonry
-        var $gridContainers = $('.grid-item-container').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: '.grid-item'
-        });
-
-      // Adjust height dynamically based on content
-      $('.grid-item').hover(
-        function() {
-          var content = $(this).find('.content');
-          content.css({
-            'height': content.find('.content-inner').prop('scrollHeight') + 'px',
-            'opacity': 1
-          });
-
-          // Trigger Masonry layout update
-          $gridContainers.masonry('layout');
-        },
-        function() {
-          var content = $(this).find('.content');
-          content.css({
-            'height': '0',
-            'opacity': 0
-          });
-
-          // Trigger Masonry layout update
-          $gridContainers.masonry('layout');
-        }
-      );
-
+       
       // Handle filter change
       $('input[name="shuffle-filter"]').on('change', function(evt) {
-        /*var input = evt.currentTarget;
-        if (input.checked) {
-            shuffleInstance.filter(input.value);
-        }*/
+        
         var filterValue = this.value;
         $('.grid-item').each(function() {
             var filter = $(this).data('groups');
@@ -128,22 +86,10 @@ AOS.init({
                 $(this).removeClass('item-hidden');
             }
         });
-        /*var filterValue = this.value;
-        if (filterValue === 'all') {
-          shuffleInstance.filter(Shuffle.ALL_ITEMS);
-        } else {
-          shuffleInstance.filter(function(element) {
-            var test = $(element).data('groups');
-            return  test.includes(filterValue);
-          });
-        }*/
-
-        // Update Masonry layout after filtering
-        $gridContainers.each(function() {
-          $(this).masonry();
-        });
-        //$gridContainers.masonry('layout');
+        
       });
+
+      $('input[name="shuffle-filter"]:first').prop('checked', true).trigger('change');
         
     });
 
