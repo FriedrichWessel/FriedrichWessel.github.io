@@ -77,6 +77,43 @@ h2 {
     padding: 50px;
 }
 
+/* Skills Grid */ 
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.skillsGrid i {
+    font-size: 3em;
+    color: var(--main); 
+}
+
+.skills{
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.skills .col.card {
+    padding: 0 0 0 0;
+    margin: 10px;
+    background-color: var(--light-bg);
+}
+
+.skills .card{
+    border: 0px;
+}
+
+.skills .card-header{
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-size: 24px;
+}
+
+
+
 /* Portfolio masonry */
 
 
@@ -97,7 +134,7 @@ h2 {
     width: 100%;
     overflow: hidden;
     position: relative;
-    max-height: 800px;
+    max-height: 1200px;
     transition: max-height 0.8s ease, opacity 0.8s ease;
 }
 
@@ -153,4 +190,5 @@ h2 {
 .item-hidden {
     max-height: 0px;
     opacity: 0;
+    margin: 0;
 }
