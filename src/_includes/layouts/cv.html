@@ -1,0 +1,72 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+
+
+
+<section class="section banner">
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+            <div class="col-lg-6">	
+				<div class="typing-container">
+					<h2 class="cd-headline clip is-full-width mb-4 ">
+						Friedrich Wessel<br>
+					</h2>
+				</div>
+			</div>
+            <div class="col"></div>
+		</div>
+        <div class="container text-center">
+            Based in Hamburg. Senior Game Developer, Tech Lead, Trainer, 15 years of experience. I create sustainable software architectures, boost team productivity, and share knowledge through live coding and professional training. Passionate about leveraging skills for a more sustainable future.
+        </div>
+	</div>
+</section>
+
+
+
+
+{% include "skills.html" %}
+
+<div class="container mt-4">
+    
+    <div class="row element-container">
+        <div class="col-md-4 left-column">
+            <h2>Experience</h2>
+        </div>
+        
+        <div class="col-md-8 right-column">
+            {% for station in collections.career %}
+                <div>
+                    <h2>{{station.data.customer}}</h2>
+                    <p class="small-info">{{station.data.title}} • {{station.data.year}}</p>
+                    <p class="description">{{station.data.description}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4 left-column">
+            <h2>Education</h2>
+        </div>
+        
+        <div class="col-md-8 right-column">
+            {% for station in collections.education %}
+                <div>
+                    <h2>{{station.data.customer}}</h2>
+                    <p class="small-info">{{station.data.title}} • {{station.data.year}}</p>
+                    <p class="description">{{station.data.description}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        
+    </div>
+    
+
+</div>
+{% endblock %}
+
+
+
+

@@ -3,7 +3,7 @@ date: 2006-01-01
 year: 2006-2008
 title: Visuell Effects Artist
 project: Film & TV
-customer: Chris Creatures
+customer: Chris Creatures Filmeffects
 description: Started as an intern, and continued to work for a little over 2 years as VFX artist. My main focus was on simulation for cloth, muscles and water. The required programming skills for those simulations led to the decision to study computer science afterwards.
 projectLink: ChrisCreatures
 projectLinkSrc: http://www.chriscreatures.com/

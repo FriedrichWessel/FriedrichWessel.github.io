@@ -1,31 +1,7 @@
 ---
-layout: layouts/base.html
+layout: layouts/home.html
 title: Friedrich Wessel
 ---
-<!-- Navigation Start -->
-<!-- Header Start --> 
-
-<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
-	<div class="container">
-	  <a class="navbar-brand" href="index.html">
-	  	<img src="images/logo.png" alt="" class="img-fluid">
-	  </a>
-
-	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="ti-align-justify"></span>
-	  </button>
-  
-		  <div class="collapse navbar-collapse" id="navbarsExample09">
-			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item  active"><a class="nav-link" href="index.html">Home</a></li>
-			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<!-- Header Close --> 
-<!-- Navigation ENd -->
 
 <!-- Banner Start -->
 <section class="section banner">
@@ -69,56 +45,7 @@ title: Friedrich Wessel
 </section>
 
 <!-- Banner End -->
-<section class="skills">
-	
-	<div class="container">
-		<h3 class="dark-headline">Technologies</h3>
-		<div class="row">
-			<div class="col card">
-				<h3 class="card-header dark-headline">Expert</h3>
-				<div class="skillsGrid card-body">
-					<i class="skill devicon-unity-plain"></i>
-					<i class="devicon-csharp-plain"></i>
-					<i class="devicon-git-plain"></i>
-				</div>            
-			</div>
-			<div class="col card">
-				<h3 class="card-header dark-headline">Solid</h3>
-				<div class="skillsGrid card-body">
-					<i class="devicon-javascript-plain"></i>
-					<i class="devicon-java-plain"></i>
-					<i class="devicon-html5-plain"></i>
-					<i class="devicon-wordpress-plain"></i>
-					<i class="devicon-jenkins-line"></i>
-					<i class="devicon-blender-original"></i>
-				</div>            
-			</div>
-			<div class="col card">
-				<h3 class="card-header dark-headline">Growing</h3>
-				<div class="card-body skillsGrid">
-					<i class="devicon-css3-plain-wordmark"></i>
-					<i class="devicon-nodejs-plain-wordmark"></i>
-					<i class="devicon-eleventy-plain"></i>
-					<i class="devicon-bootstrap-plain"></i>			
-					<i class="devicon-prisma-original"></i>
-					<i class="devicon-react-original"></i>
-				</div>            
-			</div>
-			<div class="col card">
-				<h3 class="card-header dark-headline">Basic</h3>
-				<div class="card-body skillsGrid">
-					<i class="devicon-go-original-wordmark"></i>
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-c-plain"></i>
-					<i class="devicon-spring-original"></i>
-					<i class="devicon-cplusplus-plain"></i>
-				</div>            
-			</div>
-			
-		</div>
-		
-	</div>
-</section>
+
 
 <!-- POrtfolio start -->
 <section class=" portfolio ">
@@ -142,7 +69,7 @@ title: Friedrich Wessel
 	      	</div>
     	</div>
 	
-		<div class="container mt-5">
+		
 				<div class="grid-container shuffle-wrapper">
 					{%- for project in collections.projects | reverse -%}
 						{% if loop.index0 is even %}	
@@ -155,7 +82,7 @@ title: Friedrich Wessel
 						{% endif %}
 					{%- endfor-%}	 
 				</div>
-		</div>
+		
 	</div>
 	
 </section>

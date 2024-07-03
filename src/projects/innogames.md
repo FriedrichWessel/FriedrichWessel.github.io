@@ -1,6 +1,6 @@
 ---
 date: 2018-01-01
-year: 2018
+year: 2018 - present
 title: Senior Software Developer
 project: Inno Games
 customer: Inno Games

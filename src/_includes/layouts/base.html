@@ -14,21 +14,21 @@
 	
 	<!-- ** Plugins Needed for the Project ** -->
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-	<link rel="stylesheet" href="plugins/counto/animate.css">
-	<link rel="stylesheet" href="plugins/aos/aos.css">
-	<link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
-	<link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
-	<link rel="stylesheet" href="plugins/animated-text/animated-text.css">
+	<link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="/plugins/themify/css/themify-icons.css">
+	<link rel="stylesheet" href="/plugins/counto/animate.css">
+	<link rel="stylesheet" href="/plugins/aos/aos.css">
+	<link rel="stylesheet" href="/plugins/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="/plugins/owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="/plugins/animated-text/animated-text.css">
 
 
 	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
 	<!-- Main Stylesheet -->
-	<link href="css/theme-thomson.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
+	<link href="/css/theme-thomson.css" rel="stylesheet">
+	<link href="/css/custom.css" rel="stylesheet">
 
 
 	{% block head %} 
@@ -36,25 +36,27 @@
 	
 </head>
 <body>
+	{% include "navbar.html"%}
+
 	{% block content %}
 		{{ content | safe }}
 	{% endblock %}
 	
-	<script src="plugins/jQuery/jquery.min.js"></script>
+	<script src="/plugins/jQuery/jquery.min.js"></script>
 	<!-- Bootstrap JS -->
-	<script src="plugins/bootstrap/bootstrap.min.js"></script>
-	<script src="plugins/aos/aos.js"></script>
-	<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+	<script src="/plugins/aos/aos.js"></script>
+	<script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-	<script src="plugins/shuffle/shuffle.min.js"></script>
-	<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="plugins/animated-text/animated-text.js"></script>
-	<script src="plugins/counto/apear.js"></script>
-	<script src="plugins/counto/counTo.js"></script>
+	<script src="/plugins/shuffle/shuffle.min.js"></script>
+	<script src="/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="/plugins/animated-text/animated-text.js"></script>
+	<script src="/plugins/counto/apear.js"></script>
+	<script src="/plugins/counto/counTo.js"></script>
 
 	
 	<!-- Main Script -->
-	<script src="js/script.js"></script>
+	<script src="/js/script.js"></script>
 
 </body>
 </html>

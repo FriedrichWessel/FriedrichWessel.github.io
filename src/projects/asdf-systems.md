@@ -1,6 +1,6 @@
 ---
 date: 2010-01-01
-year: 2010
+year: 2010 - 2012
 title: Co-Founder
 project: asdf-systems
 customer: asdf-systems
