@@ -1,5 +1,6 @@
 const ProjectCard = require('./src/_includes/components/projectCard');
 module.exports = function(eleventyConfig){
+	eleventyConfig.addPassthroughCopy("src/cv.html");
 	eleventyConfig.addPassthroughCopy("src/test.html");
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/css/");
@@ -7,6 +8,7 @@ module.exports = function(eleventyConfig){
 	eleventyConfig.addPassthroughCopy("src/plugins/");
 	
 	
+	eleventyConfig.addWatchTarget("src/cv.html");
 	eleventyConfig.addWatchTarget("src/test.html");
 	eleventyConfig.addWatchTarget("src/plugins/");
 	eleventyConfig.addWatchTarget("src/js/");
@@ -16,6 +18,26 @@ module.exports = function(eleventyConfig){
 	eleventyConfig.addCollection("projects", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("src/projects/**/*.*");
 	});
+
+	eleventyConfig.addCollection("pages", function(collectionApi) {
+		return collectionApi.getFilteredByGlob("src/pages/**/*.*");
+	});
+
+	eleventyConfig.addCollection("education", function(collectionApi) {
+		return collectionApi.getAll().filter(function(item) {
+		  return (item.data.tagGroup && item.data.tagGroup.includes("education"));
+		}).sort(function(a, b) {
+			return new Date(b.data.date) - new Date(a.data.date);
+		  });;
+	  });
+
+	  eleventyConfig.addCollection("career", function(collectionApi) {
+		return collectionApi.getAll().filter(function(item) {
+		  return (item.data.tagGroup && item.data.tagGroup.includes("career"));
+		}).sort(function(a, b) {
+			return new Date(b.data.date) - new Date(a.data.date);
+		  });;
+	  });
 
 	eleventyConfig.addShortcode('projectCard', ProjectCard);
 	

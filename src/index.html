@@ -25,15 +25,15 @@ title: Friedrich Wessel
 <section class="section about">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-lg-4 col-md-6 col-sm-12">
 				<h3 class="dark-headline">15 Years of Experience</h3>
 				<p>With a journey that began in film effects and evolved into a Senior Game Developer role at InnoGames GmbH, I bring over a decade of expertise across all facets of game and software development. My career has spanned from co-founding a company to freelancing as a game developer, from web applications to low-level hardware programming, and from 48h jams to multi year gaming productions. </p>
 			</div>	
-			<div class="col">
+			<div class="col-lg-4 col-md-6 col-sm-12">
 				<h3 class="dark-headline">Future Focused</h3>
 				<p>Passionate about sustainability, I design software architectures that boost team productivity and create lasting, memorable experiences. As a tech lead, and experienced trainer, I thrive on sharing knowledge through live coding, professional training, and insightful blog posts.</p>
 			</div>	
-			<div class="col">
+			<div class="col-lg-4 col-md-12">
 				<h3 class="dark-headline">Sustainable</h3>
 				<p>Beyond software, my commitment to sustainability drives my volunteer work. Growing increasingly concerned about the climate crisis and planetary boundaries, I've sought to leverage my skills for a more sustainable future. I volunteer at my village's energy initiative, providing essential software tools and project planning expertise.</p>
 			</div>	
@@ -52,36 +52,36 @@ title: Friedrich Wessel
 	<div class="container">
 		<div class="row mb-5  project-filter">
 	      	<div class="col-10">
-		        <div class="btn-group btn-group-toggle " data-toggle="buttons">
-		          <label class="btn active ">
-		            <input type="radio" name="shuffle-filter" value="project" checked="checked" />All Projects
-				  </label>
-		          <label class="btn">
-		            <input type="radio" name="shuffle-filter" value="games" />Games
-		          </label>
-		          <label class="btn">
-		            <input type="radio" name="shuffle-filter" value="public" />public speaking
-		          </label>
-		          <label class="btn">
-		            <input type="radio" name="shuffle-filter" value="other" />Other Projects
-		          </label>
-		        </div>
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn active ">
+						<input type="radio" name="shuffle-filter" value="project" checked="checked" />All Projects
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="games" />Games
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="public" />public speaking
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="other" />Other Projects
+					</label>
+				  </div>
 	      	</div>
     	</div>
 	
 		
-				<div class="grid-container shuffle-wrapper">
-					{%- for project in collections.projects | reverse -%}
-						{% if loop.index0 is even %}	
-							{% projectCard project %}	
-						{% endif %}
-					{%- endfor-%}	 
-					{%- for project in collections.projects | reverse -%}
-						{% if loop.index0 is odd %}	
-							{% projectCard project %}	
-						{% endif %}
-					{%- endfor-%}	 
-				</div>
+		<div class="grid-container shuffle-wrapper">
+			{%- for project in collections.projects | reverse -%}
+				{% if loop.index0 is even %}	
+					{% projectCard project %}	
+				{% endif %}
+			{%- endfor-%}	 
+			{%- for project in collections.projects | reverse -%}
+				{% if loop.index0 is odd %}	
+					{% projectCard project %}	
+				{% endif %}
+			{%- endfor-%}	 
+		</div>
 		
 	</div>
 	
