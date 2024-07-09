@@ -34,10 +34,15 @@
         
         <div class="col-md-8 right-column">
             {% for station in collections.career %}
-                <div>
-                    <h2>{{station.data.customer}}</h2>
-                    <p class="small-info">{{station.data.title}} • {{station.data.year}}</p>
-                    <p class="description">{{station.data.description}}</p>
+                <div class="experience">
+                    {% if station.data.projectLinkSrc.length > 0 %}
+                        <a href="{{station.data.projectLinkSrc}}" target="_blank">
+                            <h2>{{station.data.customer}}</h2></a>
+                    {% else %}
+                        <h2>{{station.data.customer}}</h2>
+                    {% endif %}
+                    <p class="small-info"><i><b>{{station.data.title}}</b></i> • {{station.data.year}}</p>
+                    <p class="description">{{station.content | safe}}</p>
                 </div>
             {% endfor %}
         </div>
@@ -49,10 +54,10 @@
         
         <div class="col-md-8 right-column">
             {% for station in collections.education %}
-                <div>
+                <div class="experience">
                     <h2>{{station.data.customer}}</h2>
-                    <p class="small-info">{{station.data.title}} • {{station.data.year}}</p>
-                    <p class="description">{{station.data.description}}</p>
+                    <p class="small-info"><i><b>{{station.data.title}}</b></i> • {{station.data.year}}</p>
+                    <p class="description">{{station.content | safe}}</p>
                 </div>
             {% endfor %}
         </div>

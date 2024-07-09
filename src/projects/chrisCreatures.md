@@ -4,7 +4,7 @@ year: 2006-2008
 title: Visuell Effects Artist
 project: Film & TV
 customer: Chris Creatures Filmeffects
-description: Started as an intern, and continued to work for a little over 2 years as VFX artist. My main focus was on simulation for cloth, muscles and water. The required programming skills for those simulations led to the decision to study computer science afterwards.
+description: Started as an intern and continued to work for over 2 years as a VFX artist, specializing in simulations for cloth, muscles, and water. The programming skills required for these simulations inspired my decision to study computer science.
 projectLink: ChrisCreatures
 projectLinkSrc: http://www.chriscreatures.com/
 vimeo: "https://player.vimeo.com/video/40504539?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -13,3 +13,5 @@ tagGroup:
     - career
     - other
 ---
+
+Started as an intern and continued to work for over 2 years as a VFX artist, specializing in simulations for cloth, muscles, and water. The programming skills required for these simulations inspired my decision to study computer science.
