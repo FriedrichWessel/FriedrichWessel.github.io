@@ -1,72 +1,90 @@
 ---
-layout: layouts/base.html
+layout: layouts/home.html
 title: Friedrich Wessel
 ---
-<div class="container">
-	<div class="main-timeline">
-		{%- for project in collections.projects | reverse -%}
-		<div class="timeline">
-			<div class="date-content">
-				<div class="date-outer">
-					<span class="date">
-						<span class="month">{{project.data.customer}}</span>
-					<span class="year">{{project.data.year}}</span>
-					</span>
+
+<!-- Banner Start -->
+<section class="section banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10">	
+				<div class="typing-container">
+					<h2 class="cd-headline clip is-full-width mb-4 ">
+						From Film Effects to<br>
+					</h2>
 				</div>
-			</div>
-			<div class="timeline-content border-bottom">
-				<h5 class="title">{{project.data.title}} : {{project.data.project}}</h5>
-				{%- if project.data.image.length > 0 %}
-					<img src={{project.data.image}} class="project-title-image">
-				{%- endif -%}
-				{%- if project.data.smallImage.length > 0 -%}
-					<img src={{project.data.smallImage}} class="small-project-title-image">
-				{%- endif -%}
-				{%- if project.data.vimeo.length > 0 %}
-					<div style="padding:55% 0 0 0;position:relative;">
-						<iframe src={{project.data.vimeo}} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel as 3d artists">
-						</iframe>
-					</div>
-					<script src="https://player.vimeo.com/api/player.js"></script>
-				{%- endif -%}
-				{%- if project.data.youtube.length > 0 %}
-				<iframe width="560" height="315" 
-					src={{project.data.youtube}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-				</iframe>
-				{%- endif -%}
-				<p class="description">
-					{{project.data.description}}
-				</p>
-				{%- if project.data.tech.length > 0 -%}
-					<div class="container border">
-						<div class="row bg-secondary text-white">
-							<div class="col border-right">Tech-Stack</div>
-							<div class="col">Project Link</div>
-						</div>
-						<div class="row">
-							<div class="col text-left">
-								<strong>{{project.data.tech}}</strong>
-							</div>
-							<div class="col">
-								<a class="link-dark" href={{project.data.projectLinkSrc}} rel="noopener noreferrer" target="_blank">{{project.data.projectLink}}</a>
-							</div>
-						</div>
-					</div>
-				{%- elif project.data.projectLink.length > 0 -%}
-				<div class="container border">
-					<div class="row bg-secondary text-white">
-						<div class="col">Project Link</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<a class="link-dark" href={{project.data.projectLinkSrc}} rel="noopener noreferrer" target="_blank">{{project.data.projectLink}}</a>
-						</div>
-					</div>
+				<div class="typing-container2">
+					<h2 class="cd-headline clip is-full-width mb-4 ">
+						Sustainable Development<br>
+					</h2>
 				</div>
-				{%- endif -%}
-				
 			</div>
 		</div>
-		{%- endfor -%}
 	</div>
-</div>
+</section>
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<h3 class="dark-headline">15 Years of Experience</h3>
+				<p>With a journey that began in film effects and evolved into a Senior Game Developer role at InnoGames GmbH, I bring over a decade of expertise across all facets of game and software development. My career has spanned from co-founding a company to freelancing as a game developer, from web applications to low-level hardware programming, and from 48h jams to multi year gaming productions. </p>
+			</div>	
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<h3 class="dark-headline">Future Focused</h3>
+				<p>Passionate about sustainability, I design software architectures that boost team productivity and create lasting, memorable experiences. As a tech lead, and experienced trainer, I thrive on sharing knowledge through live coding, professional training, and insightful blog posts.</p>
+			</div>	
+			<div class="col-lg-4 col-md-12">
+				<h3 class="dark-headline">Sustainable</h3>
+				<p>Beyond software, my commitment to sustainability drives my volunteer work. Growing increasingly concerned about the climate crisis and planetary boundaries, I've sought to leverage my skills for a more sustainable future. I volunteer at my village's energy initiative, providing essential software tools and project planning expertise.</p>
+			</div>	
+        </div>	
+		<div class="row d-flex justify-content-center align-items-center item-hidden">
+			<p>I am dedicated to building a sustainable future. Let’s create something amazing together!</p>
+		</div>
+	</div>
+</section>
+
+<!-- Banner End -->
+
+
+<!-- POrtfolio start -->
+<section class=" portfolio ">
+	<div class="container">
+		<div class="row mb-5  project-filter">
+	      	<div class="col-10">
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn active ">
+						<input type="radio" name="shuffle-filter" value="project" checked="checked" />All Projects
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="games" />Games
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="public" />public speaking
+					</label>
+					<label class="btn">
+						<input type="radio" name="shuffle-filter" value="other" />Other Projects
+					</label>
+				  </div>
+	      	</div>
+    	</div>
+	
+		
+		<div class="grid-container shuffle-wrapper">
+			{%- for project in collections.projects | reverse -%}
+				{% if loop.index0 is even %}	
+					{% projectCard project %}	
+				{% endif %}
+			{%- endfor-%}	 
+			{%- for project in collections.projects | reverse -%}
+				{% if loop.index0 is odd %}	
+					{% projectCard project %}	
+				{% endif %}
+			{%- endfor-%}	 
+		</div>
+		
+	</div>
+	
+</section>
+
+<!-- Portfolio End -->

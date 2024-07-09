@@ -1,0 +1,74 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+
+
+
+<section class="section cv banner d-flex flex-column justify-content-center align-items-center">
+	<div class="container-fluid full-height d-flex flex-column justify-content-center align-items-center">
+        
+        <div class="typing-container-center">
+            <div class="typing-text">
+                <h2>Friedrich Wessel</h2>
+            </div>
+        </div>
+        
+        <div class="container text-center cv-header col-lg-9 col-md-12">
+            Based near Lübeck. Senior Game Developer, Tech Lead, Trainer, 15 years of experience. I create sustainable software architectures, boost team productivity, and share knowledge through live coding and professional training. Passionate about leveraging skills for a more sustainable future.
+        </div>
+	</div>
+</section>
+
+
+
+
+{% include "skills.html" %}
+
+<div class="container mt-4">
+    
+    <div class="row element-container">
+        <div class="col-md-4 left-column">
+            <h4>Experience</h4>
+        </div>
+        
+        <div class="col-md-8 right-column">
+            {% for station in collections.career %}
+                <div class="experience">
+                    {% if station.data.projectLinkSrc.length > 0 %}
+                        <a href="{{station.data.projectLinkSrc}}" target="_blank">
+                            <h2>{{station.data.customer}}</h2></a>
+                    {% else %}
+                        <h2>{{station.data.customer}}</h2>
+                    {% endif %}
+                    <p class="small-info"><i><b>{{station.data.title}}</b></i> • {{station.data.year}}</p>
+                    <p class="description">{{station.content | safe}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row element-container">
+        <div class="col-md-4 left-column">
+            <h4>Education</h4>
+        </div>
+        
+        <div class="col-md-8 right-column">
+            {% for station in collections.education %}
+                <div class="experience">
+                    <h2>{{station.data.customer}}</h2>
+                    <p class="small-info"><i><b>{{station.data.title}}</b></i> • {{station.data.year}}</p>
+                    <p class="description">{{station.content | safe}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        
+    </div>
+    
+
+</div>
+{% endblock %}
+
+
+
+
