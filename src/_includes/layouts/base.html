@@ -33,14 +33,17 @@
 
 	{% block head %} 
 	{% endblock %}
-	
 </head>
 <body>
 	{% include "navbar.html"%}
-
-	{% block content %}
-		{{ content | safe }}
-	{% endblock %}
+	<div class="content-wrapper">
+		{% block content %}
+			{{ content | safe }}
+		{% endblock %}
+		
+		
+	</div>
+	{% include "footer.html" %}
 	
 	<script src="/plugins/jQuery/jquery.min.js"></script>
 	<!-- Bootstrap JS -->

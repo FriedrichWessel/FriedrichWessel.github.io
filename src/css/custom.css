@@ -12,6 +12,28 @@ h2 {
     color: var(--main);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-wrapper {
+    flex: 1 0 auto;
+  }
+  
+  .footer {
+    flex-shrink: 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 20px 0;
+  }
+
+  .footer-widget a:hover {
+    color: var(--highlight);
+  }
+
 /* banner */
 
 .banner {
@@ -274,4 +296,30 @@ h2 {
     max-height: 0px;
     opacity: 0;
     margin: 0;
+}
+
+/* Contact */
+.color-field {
+    background-color: var(--dark-bg);
+    width: 100%;
+    height: 100%;
+}
+
+.contact-devicon{
+    font-size: 3em;
+    color: var(--main); 
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--dark-main);
+    font-weight: 500;
+    font-size: 32px;
+}
+
+/* Impressum */
+
+.impressum h3{
+    color: var(--main);
+    font-weight: 500;
 }
