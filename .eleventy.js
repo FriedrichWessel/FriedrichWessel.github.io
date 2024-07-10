@@ -31,6 +31,14 @@ module.exports = function(eleventyConfig){
 		  });;
 	  });
 
+	  eleventyConfig.addCollection("navbar", function(collectionApi) {
+		return collectionApi.getAll().filter(function(item) {
+		  return (item.data.tagGroup && item.data.tagGroup.includes("navbar"));
+		}).sort(function(a, b) {
+			return new Date(b.data.date) - new Date(a.data.date);
+		  });;
+	  });
+
 	  eleventyConfig.addCollection("career", function(collectionApi) {
 		return collectionApi.getAll().filter(function(item) {
 		  return (item.data.tagGroup && item.data.tagGroup.includes("career"));
